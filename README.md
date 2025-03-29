@@ -1,4 +1,4 @@
 # master-music-player
-Author : Pasi Abhishek
-Project : Master Music Player
-year : 2025
+Author : Pasi Abhishek <br>
+Project : Master Music Player<br>
+year : 2025<br>
