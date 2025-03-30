@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
 }
-body{
+.body{
     background-color: var(--color1);
     width: 100vw;
     height: 100vh;
@@ -20,8 +20,7 @@ body{
     justify-content: center;
     color:  var(--color4);
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 100;
-    
+    font-weight: 100;    
 }
 .card{
     border: 2px solid var(--color3);
@@ -31,6 +30,7 @@ body{
     height: 280px;
     display: flex;
     flex-direction: row;
+   
 
 }
 .body .card .player_body{
@@ -95,6 +95,7 @@ body{
 .brand {
     padding:10px 20px;
     margin:0px;
+    font-size: 10PX;
 }
 .body .card .song_list{
     background: var(--color2);
