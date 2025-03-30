@@ -1,15 +1,10 @@
+// ALL IMPORTANT VARIABLE
+
 var i = 0;
 var v = 0.5;
 var song = new Audio();
-
-
-
-
-
 var song_name_array = ['Despacito ','Shape of You','See You Again','Uptown Funk ','Gangnam Style ','Dame Tu Cosita','Sorry ','Sugar ','Roar ','Counting Stars']
-
 var singer_name_array = ['Luis Fonsi ft. Daddy Yankee',' Ed Sheeran',' Wiz Khalifa ft. Charlie Puth','Mark Ronson ft. Bruno Mars','PSY',' El Chombo ft. Cutty Ranks','Justin Bieber','Maroon 5',' Katy Perry','OneRepublic']
-
 var song_artwork_array = [
     'https://images.genius.com/736a05a3bfc3ae89af3d9b4d3e6c209d.1000x1000x1.jpg',
     'https://tse4.mm.bing.net/th?id=OIP.EHwrQ_EMJJB3wfdhhWO7YwHaHa&pid=Api&P=0&h=180" alt="song artwork',
@@ -21,13 +16,7 @@ var song_artwork_array = [
     'https://i1.sndcdn.com/artworks-000107338750-5bxgf8-t500x500.jpg',
     'https://m.media-amazon.com/images/I/513u94PPcFL._AC_UF894,1000_QL80_.jpg',
     'https://i.scdn.co/image/ab67616d0000b273abe84d30b6cbe9452dea68e5'
-
-
-
-
-
 ]
-
 var song_link_array = [
     'https://www.dropbox.com/scl/fi/6mvaz81uibt64nnjuz46f/Despacito.mp3?rlkey=x70z46r4xnszdwohe1aqtp7za&st=sz3uz23m&dl=1',
     'https://www.dropbox.com/scl/fi/wbq3ksbloen3390kk58tp/Shape-of-you.mp3?rlkey=iyxd2nssq06adoncgzwmshnex&st=33d4xc4e&dl=1',
@@ -43,15 +32,18 @@ var song_link_array = [
 ]
 
 
+
+// ALL IMPORTANT FUNCTIONS
+
+// LOADER FUNCTION
 function shuru(){
     i = 0;
     document.getElementById("song_name_position").innerHTML = song_name_array[i];
     document.getElementById("singer_name_position").innerHTML = singer_name_array[i];
     document.getElementById("artwork_wall").src = song_artwork_array[i] ;
-
-
 }
 
+// PLAYER FUNCTION
 function play( j ){
     i = j;
     document.getElementById("song_name_position").innerHTML = song_name_array[i];
@@ -61,17 +53,16 @@ function play( j ){
     song.play()
     document.getElementById('play').style="background-color : var(--color1); border-radius: 50%;"
     document.getElementById('pause').style="background-color : var(--color3); border-radius: 50%;"
-
-
-
 }
+
+// PAUSER FUNCTION
 function pause(){
     song.pause();
     document.getElementById('pause').style="background-color : var(--color1); border-radius: 50%;";
     document.getElementById('play').style="background-color : var(--color3); border-radius: 50%;"
-
 }
 
+// NEXT SONG FUNCTION
 function next(i){
     if(i < song_name_array.length-1){
         i+=1;
@@ -84,6 +75,7 @@ function next(i){
 
 }
 
+// PREVIES SONG FUNCTION
 function pre(i){
     if(i < 1){
         i= song_name_array.length-1;
@@ -96,17 +88,16 @@ function pre(i){
 
 }
 
+// VOLUME CONTROLS
 function volume(x){
     v = x;
     song.volume = v;
 
 }
 
-
+// KEY EVENT ACTION
 document.addEventListener('keydown', keydown_ivent);
-
 function keydown_ivent(e) {
-	
 	var key ;
 	switch (e.key) {
 
