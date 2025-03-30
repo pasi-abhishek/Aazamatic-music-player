@@ -6,7 +6,9 @@
 
     <!----Style link-->
     <link rel="stylesheet" href="style.css">
-    <title>Master Music Player</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aazamatic Music Player</title>
 </head>
 <body onload="shuru()">
     <div class="body">
@@ -22,13 +24,15 @@
                 <div class="song_controls">
                     <ul>
                         <li onclick="pre(i)"> < </li>
-                        <li onclick="pause()"> || </li>
-                        <li onclick="play(i)"> |> </li>
+                        <li id="pause" onclick="pause()"> || </li>
+                        <li id="play" onclick="play(i)">
+                             <i onclick="play(i)" class="fa-solid fa-play"></i>
+                        </li>
                         <li onclick="next(i)"> > </li>
                     </ul>
                 </div>
                 <div class="brand">
-                    <h3>MASTER MUSIC PLAYER</h3>
+                    <h3>AAZAMATIC MUSIC PLAYER</h3>
                 </div>
             </div>
             <div class="song_list">
