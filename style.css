@@ -1,0 +1,205 @@
+:root{
+    --color1 : #141414; 
+    --color2 : #0d0d0d; 
+    --color3 : #070606; 
+    --color4 : #f6f6f6; 
+    --b-rad1 : 20px;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--color1);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  var(--color4);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    
+}
+.card{
+    border: 2px solid var(--color3);
+    border-radius: var(--b-rad1);
+    background: var(--color3);
+    width: 400px;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+
+}
+.body .card .player_body{
+    background: var(--color3);
+    width: 250px;
+    height: auto;
+    border-radius: var(--b-rad1);
+    display: flex;
+    flex-direction: column;
+
+}
+.body .card .player_body .artwork img{
+    width: 140px;
+    height: 140px;
+    padding:10px 17px;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+.body .card .player_body .song_name{
+    padding-left: 20px;
+
+}
+.body .card .player_body .song_name{
+    padding-left: 20px;
+
+}
+.body .card .player_body .song_name h4{
+    font-size: 13px;
+
+}
+.body .card .player_body .song_name p{
+    font-size: 10px;
+    margin: 5px 0px;
+
+}
+
+.song_controls{
+    display: flex;
+    flex-direction: row;
+    padding-left: 18px;
+
+}
+.song_controls ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.song_controls ul li{
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+}
+.song_controls ul li:hover{
+    padding: 7px;
+    background-color: var(--color2);
+    border-radius: 50%;
+}
+.brand {
+    padding:10px 20px;
+    margin:0px;
+}
+.body .card .song_list{
+    background: var(--color2);
+    width: 200px;
+    height: auto;
+    border: 1px  solid var(--color3);
+    padding-left: 13px;
+    padding-right: 3px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    border-radius:0px var(--b-rad1) var(--b-rad1) 0px;
+/* box-shadow: -1px 0.5px 0.5px 1px var(--color12) ;  */
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    
+
+}
+.song_list::-webkit-scrollbar {
+    display: none;
+  }
+  
+.body .card .song_list ul{
+    list-style: none;
+}
+.body .card .song_list  ul li{
+    padding: 10px  10px;
+    width: 100%;
+    border-bottom: 1px solid var(--color1);
+    
+}
+.body .card .song_list  ul li:hover{
+    background-color: var(--color1);
+    border-radius: 10px;
+}
+.body .card .song_list  ul li h5{
+    font-size: 10px;    
+    font-weight: 1000;
+    padding: 0px 5px;
+}
+.body .card .song_list  ul li h6{
+        font-size: 9px;    
+        padding: 0px 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: lighter;
+}
+
+
+@media only screen and (width < 600px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 250px;
+    }
+    .card *{
+        text-align: center;
+
+    }
+    .body .card .player_body{
+        text-align: center;
+        height: auto;
+        padding-bottom: 10px;
+    
+
+    }
+    .body .card .player_body .song_name {
+        padding: 0px;
+        margin: 0px;
+    }
+    .song_controls ul li{
+        width: 30px;
+        padding: 9px;
+        text-align: center;
+        margin: 3px;
+        text-align: center;
+        height: auto;
+    }
+    .body .card .song_list{
+        background: var(--color2);
+        width: 250px;
+        text-align: center;
+        height: auto;
+        border: 1px solid var(--color3);
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+        padding-top: 25px;
+        border-radius: 0px 0px var(--b-rad1) var(--b-rad1) ;
+        margin-top: 10px;
+    
+    }
+    .body .card .song_list ul li{
+        width: 230px;
+        padding: 7px;
+        margin: 4px;
+        text-align: center;
+        height: auto;
+       
+    
+    }
+    
+}
+
+
