@@ -1,26 +1,6 @@
 var i = 0;
-var v = 70;
+var v = 0.5;
 var song = new Audio();
-
-
-document.addEventListener('keydown', keydown_ivent);
-
-function keydown_ivent(e) {
-	
-	var key ;
-	switch (e.key) {
-
-		case 'ArrowLeft':
-			key = i;
-            pre(key)
-			break;
-		case 'ArrowRight':
-			key = i;
-            next(key)
-			break;
-	}
-	
-}
 
 
 
@@ -79,12 +59,17 @@ function play( j ){
     document.getElementById("artwork_wall").src = song_artwork_array[i] ;
     song.src= song_link_array[i]
     song.play()
+    document.getElementById('play').style="background-color : var(--color1); border-radius: 50%;"
+    document.getElementById('pause').style="background-color : var(--color3); border-radius: 50%;"
 
 
 
 }
 function pause(){
     song.pause();
+    document.getElementById('pause').style="background-color : var(--color1); border-radius: 50%;";
+    document.getElementById('play').style="background-color : var(--color3); border-radius: 50%;"
+
 }
 
 function next(i){
@@ -115,6 +100,35 @@ function volume(x){
     v = x;
     song.volume = v;
 
+}
+
+
+document.addEventListener('keydown', keydown_ivent);
+
+function keydown_ivent(e) {
+	
+	var key ;
+	switch (e.key) {
+
+		case 'ArrowUp':
+			key = v+0.1;
+            volume(key)
+			break;
+		case 'ArrowDown':
+			key = i;
+            key = v-0.1;
+            volume(key)
+			break;
+        case 'ArrowLeft':
+			key = i;
+            pre(key)
+			break;
+		case 'ArrowRight':
+			key = i;
+            next(key)
+			break;
+	}
+	
 }
 
 
