@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----Style link-->
+    <link rel="stylesheet" href="style.css">
     <title>Master Music Player</title>
 </head>
-<body>
-    git 
+<body onload="shuru()">
+    <div class="body">
+        <div class="card">
+            <div class="player_body">
+                <div class="artwork">
+                    <img id="artwork_wall" src="https://tse4.mm.bing.net/th?id=OIP.EHwrQ_EMJJB3wfdhhWO7YwHaHa&pid=Api&P=0&h=180" alt="song artwork" srcset="">
+                </div>
+                <div class="song_name">
+                    <h4 id="song_name_position">Shape of You</h4>
+                    <p id="singer_name_position">ED Aazam</p>
+                </div>
+                <div class="song_controls">
+                    <ul>
+                        <li onclick="pre(i)"> < </li>
+                        <li onclick="pause()"> || </li>
+                        <li onclick="play(i)"> |> </li>
+                        <li onclick="next(i)"> > </li>
+                    </ul>
+                </div>
+                <div class="brand">
+                    <h3>MASTER MUSIC PLAYER</h3>
+                </div>
+            </div>
+            <div class="song_list">
+                <ul>
+                    <li onclick="play(0)">
+                        <h5>Despacito </h5>
+                        <h6>Luis Fonsi ft. Daddy Yankee</h6>
+                    </li>
+                    <li onclick="play(1)">
+                        <h5>Shape Of You</h5>
+                        <h6> Ed Sheeran </h6>
+                    </li>
+                    <li onclick="play(2)">
+                        <h5>See You Again</h5>
+                        <h6>Wiz Khalifa ft. Charlie Puth</h6>
+                    </li>
+                    <li onclick="play(3)">
+                        <h5>Uptown Funk</h5>
+                        <h6>Mark Ronson ft. Bruno Mars</h6>
+                    </li>
+                    <li onclick="play(4)">
+                        <h5> Gangnam Style </h5>
+                        <h6>PSY</h6>
+                    </li>
+                    <li onclick="play(5)">
+                        <h5>Dame Tu Cosita</h5>
+                        <h6> El Chombo ft. Cutty Ranks</h6>
+                    </li>
+                    <li onclick="play(6)">
+                        <h5>Sorry</h5>
+                        <h6>Justin Bieber</h6>
+                    </li>
+                    <li onclick="play(7)">
+                        <h5>Sugar</h5>
+                        <h6>Maroon  5</h6>
+                    </li>
+                    <li onclick="play(8)">
+                        <h5>Roar</h5>
+                        <h6>Katy Perry</h6>
+                    </li>
+                    <li onclick="play(9)">
+                        <h5>Counting Stars  </h5>
+                        <h6>OneRepublic</h6>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
