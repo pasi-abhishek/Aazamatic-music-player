@@ -1,9 +1,13 @@
+/* VARIABLE */
+
 :root{
     --color1 : #141414; 
     --color2 : #0d0d0d; 
     --color3 : #070606; 
     --color4 : #f6f6f6; 
     --b-rad1 : 20px;
+    --width-mob: 70vw;
+    --height-mob: 70vh;
 
 }
 
@@ -19,9 +23,13 @@
     align-items: center;
     justify-content: center;
     color:  var(--color4);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;  
     font-weight: 100;    
 }
+
+/* ARTWORK SIDE */
 .card{
     border: 2px solid var(--color3);
     border-radius: var(--b-rad1);
@@ -67,6 +75,7 @@
 
 }
 
+/* ALL CONTROLS */
 .song_controls{
     display: flex;
     flex-direction: row;
@@ -92,10 +101,14 @@
     background-color: var(--color2);
     border-radius: 50%;
 }
+
+/* BRAND  */
 .brand {
     padding:10px 20px;
     margin:0px;
     font-size: 10PX;
+    font-family: "Winky Sans", sans-serif;
+
 }
 .body .card .song_list{
     background: var(--color2);
@@ -117,6 +130,8 @@
     
 
 }
+/* HIDING SCROLL BAR OF LIST */
+
 .song_list::-webkit-scrollbar {
     display: none;
   }
@@ -147,12 +162,15 @@
 }
 
 
+/* CUSTOMIZATON FOR MOBILE PHONES */
+
+
 @media only screen and (width < 600px) {
     .card{
         display: flex;
         flex-direction: column;
-        height: 500px;
-        width: 250px;
+        height: var(--height-mob);
+        width: var(--width-mob);
     }
     .card *{
         text-align: center;
@@ -162,7 +180,8 @@
         text-align: center;
         height: auto;
         padding-bottom: 10px;
-    
+        width: var(--width-mob);
+
 
     }
     .body .card .player_body .song_name {
@@ -179,7 +198,7 @@
     }
     .body .card .song_list{
         background: var(--color2);
-        width: 250px;
+        width: var(--width-mob);
         text-align: center;
         height: auto;
         border: 1px solid var(--color3);
@@ -192,13 +211,24 @@
     
     }
     .body .card .song_list ul li{
-        width: 230px;
+        width: 65vw;
         padding: 7px;
         margin: 4px;
         text-align: center;
         height: auto;
        
     
+    }
+    .song_controls{
+        width: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+        margin: auto;
+
+
     }
     
 }
